@@ -61,14 +61,16 @@ const login = async (req, res) => {
                 res.cookie('jwt', refreshToken, {
                     httpOnly: true,
                     secure: true,
-                    sameSite: 'strict',
+                    path: '/',
+                    sameSite: 'None',
                     maxAge: 7 * 24 * 60 * 60 * 1000,
                 })
             } else {
                 res.cookie('jwt', refreshToken, {
                     httpOnly: true,
                     secure: true,
-                    sameSite: 'strict',
+                    path: '/',
+                    sameSite: 'None',
                 })
             }
 
@@ -121,7 +123,8 @@ const refresh = (req, res) => {
                     res.clearCookie('jwt', {
                         httpOnly: true,
                         secure: true,
-                        sameSite: 'strict',
+                        path: '/',
+                        sameSite: 'None',
                     })
 
                     return res.status(401).json({ message: 'Unauthorized' })
@@ -159,7 +162,8 @@ const logout = async (req, res) => {
     res.clearCookie('jwt', {
         httpOnly: true,
         secure: true,
-        sameSite: 'strict',
+        path: '/',
+        sameSite: 'None',
     })
 
     // Is refreshToken in db?
