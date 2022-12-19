@@ -1,19 +1,28 @@
-### HTTP Status:
+## Description
 
--   200: Thành công
--   400: request không hợp lệ
--   401: Không được phép
--   403: Unauthorized
--   409: request data không hợp lệ
--   500: Lỗi server
+The application records your tasks and organizes them by time, priority, status and easy to find.
 
-### Task
+## Deploy
 
--   Thêm tính năng tạo task list
--   Thêm tính năng thay đổi ngôn ngữ
--   Thêm tính năng edit task
--   Thay đổi UI của task để thân nhiên với người dùng
--   Thêm hiệu ứng animation cho Task app
+-   https://page-task.netlify.app/
 
--   Hoàn thiện server
--   Hoàn thiện UI and login cho client
+## References
+
+#### Client
+
+-   [Flowbite - Tailwind CSS component library](https://flowbite.com/)
+-   [Redux Toolkit](https://redux-toolkit.js.org/)
+-   [FontAwesome Icons](https://fontawesome.com/docs/web/use-with/react/)
+-   [jwt-decode](https://github.com/auth0/jwt-decode)
+
+#### Server
+
+-   [mongoose](https://mongoosejs.com/docs/guide.html)
+-   [dotenv](https://www.npmjs.com/package/dotenv)
+-   [bcrypt](https://www.npmjs.com/package/bcrypt)
+-   [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
+-   [cookie-parser](https://github.com/expressjs/cookie-parser)
+
+#### Database
+
+-   [MongoDB](https://www.mongodb.com/)

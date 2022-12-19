@@ -1,8 +1,4 @@
-import {
-    faMagnifyingGlass,
-    faChevronDown,
-    faFilter,
-} from '@fortawesome/free-solid-svg-icons'
+import { faFilter, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'

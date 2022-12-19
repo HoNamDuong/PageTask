@@ -1,5 +1,7 @@
 import {
     faListCheck,
+    faMoon,
+    faSun,
     faUser,
     faUserGear,
 } from '@fortawesome/free-solid-svg-icons'
@@ -25,7 +27,7 @@ const DashHeader = () => {
 
     return (
         <nav className="border-b border-gray-200 dark:border-gray-700">
-            <ul className="-mb-px flex flex-wrap text-center text-sm font-medium text-gray-500 dark:text-gray-400">
+            <ul className="-mb-px flex flex-wrap items-center text-center text-sm font-medium text-gray-500 dark:text-gray-400">
                 <li className="mr-2">
                     <NavLink to={PART.Task}>
                         {({ isActive }) => {
@@ -94,8 +96,18 @@ const DashHeader = () => {
                         </NavLink>
                     </li>
                 )}
-                <li className="my-auto ml-auto pr-4">
-                    <label className="relative inline-flex cursor-pointer items-center">
+                <li className="ml-auto mt-1 pr-4">
+                    <span onClick={() => toggleDarkMode()}>
+                        {dark ? (
+                            <FontAwesomeIcon className="h-5 w-5" icon={faSun} />
+                        ) : (
+                            <FontAwesomeIcon
+                                className="h-5 w-5"
+                                icon={faMoon}
+                            />
+                        )}
+                    </span>
+                    {/* <label className="relative inline-flex cursor-pointer items-center">
                         <input
                             type="checkbox"
                             className="peer sr-only"
@@ -103,7 +115,7 @@ const DashHeader = () => {
                             checked={dark}
                         />
                         <div className="peer h-6 w-11 rounded-full bg-gray-200 after:absolute after:top-[2px] after:left-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-blue-600 peer-checked:after:translate-x-full peer-checked:after:border-white dark:border-gray-600 dark:bg-gray-700"></div>
-                    </label>
+                    </label> */}
                 </li>
             </ul>
         </nav>

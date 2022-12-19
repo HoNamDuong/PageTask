@@ -11,12 +11,12 @@ const Welcome = () => {
     return (
         <section className="my-12 flex flex-col items-center justify-center text-center">
             <h2 className="text-6xl font-bold dark:text-gray-600">Welcome!</h2>
-            <p className="my-8 px-8 dark:text-gray-400">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Cupiditate eveniet eligendi fugiat iusto! Quos, temporibus enim?
-                Eum corrupti alias, doloremque mollitia sint quasi tempora vero
-                facere error totam deleniti doloribus?
-            </p>
+            <span className="my-8 px-8 dark:text-gray-400">
+                The application records your tasks and organizes them by time,
+                priority, status and easy to find.
+                <br />
+                <span>Wish you have a good experience!</span>
+            </span>
             <div className="flex items-center gap-2">
                 {id ? (
                     <Link

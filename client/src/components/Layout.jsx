@@ -1,18 +1,19 @@
 import { Link, Outlet } from 'react-router-dom'
-import useLocalStorage from '../hooks/useLocalStorage'
+import { PART } from '../config/constant.'
+// import useLocalStorage from '../hooks/useLocalStorage'
 
 const Layout = () => {
-    const [dark, setDark] = useLocalStorage('dark', false)
+    // const [dark, setDark] = useLocalStorage('dark', false)
 
-    const toggleDarkMode = () => {
-        if (!dark) {
-            setDark(true)
-            document.documentElement.classList.add('dark')
-        } else {
-            setDark(false)
-            document.documentElement.classList.remove('dark')
-        }
-    }
+    // const toggleDarkMode = () => {
+    //     if (!dark) {
+    //         setDark(true)
+    //         document.documentElement.classList.add('dark')
+    //     } else {
+    //         setDark(false)
+    //         document.documentElement.classList.remove('dark')
+    //     }
+    // }
 
     return (
         <div className="flex min-h-screen flex-col items-center bg-white text-gray-700 dark:bg-gray-900 dark:text-gray-400">
@@ -31,13 +32,15 @@ const Layout = () => {
             </div>
             {/* Footer */}
             <footer className="mb-8 w-full max-w-md text-center">
-                Built by
-                <span className="ml-2 bg-gradient-to-r from-green-400 to-blue-600 bg-clip-text text-transparent">
-                    HoNamDuong
-                </span>
-                <span className="ml-4 cursor-pointer" onClick={toggleDarkMode}>
+                <Link to={`/${PART.About}`}>
+                    Built by
+                    <span className="ml-2 bg-gradient-to-r from-green-400 to-blue-600 bg-clip-text text-transparent">
+                        HoNamDuong
+                    </span>
+                    {/* <span className="ml-4 cursor-pointer" onClick={toggleDarkMode}>
                     Toggle Dark Mode
-                </span>
+                </span> */}
+                </Link>
             </footer>
         </div>
     )
